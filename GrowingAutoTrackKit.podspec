@@ -38,7 +38,11 @@ THE SOFTWARE.
   s.source       = { :git => 'https://github.com/growingio/GrowingSDK-iOS-GrowingAutoTrackKit.git', :branch => 'develop', :tag => 'test_v_0.1'}
   s.source_files = "GrowingAutoTrackKit/*.{framework,txt}"
   s.source_files = "GrowingAutoTrackKit/VERSION"
+  
+  s.static_framework = true
   s.requires_arc = true
+  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
+  
   s.dependency 'GrowingCoreKit', '~> 2.4.0'
 
   s.default_subspec = 'Core'
