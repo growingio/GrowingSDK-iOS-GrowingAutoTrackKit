@@ -72,7 +72,7 @@
 // 如果是自定义的View建议优先使用重写getter方法来实现 以提高性能
 @interface UIView(GrowingAttributes)
 
-// 手动标识该view不要追踪
+// 手动标识该view不要追踪，请在该view被初始化后立刻赋值
 @property (nonatomic, assign) BOOL      growingAttributesDonotTrack;
 
 // 手动标识该view不要追踪它的值，默认是NO，特别的UITextView，UITextField，UISearchBar默认是YES
