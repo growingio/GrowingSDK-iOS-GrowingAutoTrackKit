@@ -41,7 +41,7 @@ THE SOFTWARE.
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   s.preserve_paths = 'GrowingAutoTrackKit/ReleaseNote.txt', 'GrowingAutoTrackKit/VERSION'
 
-  s.dependency 'GrowingCoreKit', s.version
+  s.dependency 'GrowingCoreKit', '~> 2.5.6'
   s.frameworks = 'Foundation'
   s.vendored_frameworks = 'GrowingAutoTrackKit/*.framework'
 end
