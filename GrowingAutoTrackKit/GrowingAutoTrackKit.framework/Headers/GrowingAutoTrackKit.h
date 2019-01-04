@@ -35,17 +35,17 @@
 /// !!!: V2.0埋点相关API，请在主线程里调用.
 /**
  设置页面级变量
- 
- @param variable ：页面级变量, 变量不能为nil
+ SDK会缓存变量,在UIViewController没有被销毁之前, 每次进入都将自动补发
+ @param variable ：页面级变量, 变量为nil,或者空字典, 清除所有缓存变量
  @param viewController ： 目标 UIViewController
  */
 + (void)setPageVariable:(NSDictionary<NSString *, NSObject *> *)variable
        toViewController:(UIViewController *)viewController;
 /**
  页面级变量
- 
+ SDK会缓存变量,在UIViewController没有被销毁之前,每次进入都将自动补发
  @param key : 变量名称, 变量名称不能为nil或者""
- @param stringValue : 字符串变量, 变量不能为nil或者""
+ @param stringValue : 字符串变量, 变量为nil时清除缓存变量
  @param viewController : 目标 UIViewController
  */
 + (void)setPageVariableWithKey:(NSString *)key
@@ -53,9 +53,9 @@
               toViewController:(UIViewController *)viewController;
 /**
  页面级变量
- 
+ SDK会缓存变量,在UIViewController没有被销毁之前,每次进入都将自动补发
  @param key : 变量名称, 变量名称不能为nil或者""
- @param numberValue : 数值类型变量, 变量不能为nil
+ @param numberValue : 数值类型变量, 变量为nil时清除缓存变量
  @param viewController : 目标 UIViewController
  */
 + (void)setPageVariableWithKey:(NSString *)key
@@ -74,6 +74,9 @@
 
 // 手动标识该view不要追踪，请在该view被初始化后立刻赋值
 @property (nonatomic, assign) BOOL      growingAttributesDonotTrack;
+
+// 手动标识该view不要追踪，请在该view被初始化后立刻赋值
+@property (nonatomic, assign) BOOL      growingAttributesDonotTrackImp;
 
 // 手动标识该view不要追踪它的值，默认是NO，特别的UITextView，UITextField，UISearchBar默认是YES
 @property (nonatomic, assign) BOOL      growingAttributesDonotTrackValue;
