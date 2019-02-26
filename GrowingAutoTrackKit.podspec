@@ -42,6 +42,6 @@ THE SOFTWARE.
   s.preserve_paths = 'GrowingAutoTrackKit/ReleaseNote.txt', 'GrowingAutoTrackKit/VERSION'
 
   s.dependency 'GrowingCoreKit', '~> 2.7.0'
-  s.frameworks = 'Foundation'
+  s.frameworks = 'Foundation' , 'WebKit'
   s.vendored_frameworks = 'GrowingAutoTrackKit/*.framework'
 end
