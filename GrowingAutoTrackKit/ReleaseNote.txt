@@ -1,10 +1,4 @@
-2.3.1 Release Note
-
-新增功能:
-1. PI-42: Hybrid Mode 埋点支持
+2.7.3 Release Note
 
 修复问题:
-1. PI-216: 对部分场景下Hybrid JS SDK加载失败而无法对H5页面进行数据采集、圈选的情况提供可手动调用的接口;
-2. PI-730, PI-839: 优化客户端数据库的批量操作，解决小部分机型出现crash的情况;
-3. PI-823: 优化因开发证书变更导致keychain数据无法获取的问题;
-4. PI-1441: 优化小部分clck事件无法找到对应page的问题.
+1. webview bug修复
