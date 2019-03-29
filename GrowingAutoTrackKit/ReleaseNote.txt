@@ -1,4 +1,4 @@
-2.7.3 Release Note
+2.7.4 Release Note
 
-修复问题:
-1. webview bug修复
+1.修复了GrowingAspectModeDynamicSwizzling Mode 下 WKWebView crash
+2.web圈app连接流畅度优化
