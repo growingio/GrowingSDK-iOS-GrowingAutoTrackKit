@@ -6,3 +6,7 @@
 2.7.5 Release Note
 
 无
+
+2.7.6 Release Note
+
+1. 圈选增加对Hybrid元素的chng事件支持
