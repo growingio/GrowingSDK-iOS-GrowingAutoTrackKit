@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "GrowingAutoTrackKit"
-  s.version      = "2.7.6"
+  s.version      = "2.7.7"
   s.summary      = "GrowingIO-SDK-GrowingAutoTrackKit"
 
   s.description  = <<-DESC
@@ -41,7 +41,7 @@ THE SOFTWARE.
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   s.preserve_paths = 'GrowingAutoTrackKit/ReleaseNote.txt', 'GrowingAutoTrackKit/VERSION'
 
-  s.dependency 'GrowingCoreKit', '~> 2.7.6'
+  s.dependency 'GrowingCoreKit', '~> 2.7.7'
   s.frameworks = 'Foundation' , 'WebKit'
   s.vendored_frameworks = 'GrowingAutoTrackKit/*.framework'
 end
