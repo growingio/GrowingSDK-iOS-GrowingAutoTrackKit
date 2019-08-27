@@ -1,3 +1,6 @@
+2.8.2 Release note
+无
+
 2.8.1 Release note
 1.增强SDK稳定性
 2.新增imp半自动打点功能
