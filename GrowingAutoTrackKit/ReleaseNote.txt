@@ -1,3 +1,6 @@
+2.8.3 Release note
+修复iOS9 UIInputWindowController 在GrowingAspectModeSubClass crash的问题
+
 2.8.2 Release note
 无
 
