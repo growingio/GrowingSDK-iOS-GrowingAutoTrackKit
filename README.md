@@ -6,7 +6,7 @@ This Pod helps our customers to integrate our SDK easily. For more details, plea
 
 To integrate this pod, please add `pod 'GrowingAutoTrackKit'` into your Podfile target(s). Here's an example:
 
-platform :ios, '7.0'
+platform :ios, '8.0'
 xcodeproj 'MyApp/MyApp.xcodeproj'
 target 'MyApp' do
 pod 'GrowingAutoTrackKit'
