@@ -23,6 +23,7 @@ jobs:
       - name: Deploy to Cocoapods
         run: |
           set -eo pipefail
+          pod repo update --verbose
           pod trunk push --allow-warnings --verbose
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
