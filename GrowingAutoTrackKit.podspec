@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "GrowingAutoTrackKit"
-  s.version      = "2.9.10"
+  s.version      = "2.9.11"
   s.summary      = "GrowingIO-SDK-GrowingAutoTrackKit"
 
   s.description  = <<-DESC
@@ -35,13 +35,13 @@ THE SOFTWARE.
   s.platform     = :ios
   s.ios.deployment_target = "8.0"
 
-  s.source       = { :http => 'https://assets.growingio.com/sdk/ios/GrowingIO-iOS-AutoTrackKit-2.9.10.zip' }  
+  s.source       = { :http => 'https://assets.growingio.com/sdk/ios/GrowingIO-iOS-AutoTrackKit-2.9.11.zip' }  
   s.static_framework = true
   s.requires_arc = true
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   s.preserve_paths = 'GrowingIO-iOS-AutoTrackKit/ReleaseNote.txt', 'GrowingIO-iOS-AutoTrackKit/VERSION'
 
-  s.dependency 'GrowingCoreKit', '2.9.10'
+  s.dependency 'GrowingCoreKit', '2.9.11'
   s.frameworks = 'Foundation' , 'WebKit'
   s.vendored_frameworks = 'GrowingIO-iOS-AutoTrackKit/*.framework'
 end
