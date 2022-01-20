@@ -17,13 +17,18 @@ jobs:
         
       - uses: actions/checkout@v2
 
+      # https://github.com/CocoaPods/CocoaPods/issues/9497
+      # https://github.com/CocoaPods/cocoapods-trunk/pull/147
       - name: Install Cocoapods
-        run: gem install cocoapods
+        run: |
+          gem install cocoapods
+          gem install cocoapods-trunk
+          gem update cocoapods-trunk
         
       - name: Deploy to Cocoapods
         run: |
           set -eo pipefail
           pod repo update --verbose
-          pod trunk push --allow-warnings --verbose
+          pod trunk push --allow-warnings --verbose --synchronous
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
