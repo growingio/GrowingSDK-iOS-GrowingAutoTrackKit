@@ -41,7 +41,7 @@ THE SOFTWARE.
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   s.preserve_paths = 'GrowingIO-iOS-AutoTrackKit/ReleaseNote.txt', 'GrowingIO-iOS-AutoTrackKit/VERSION'
 
-  s.dependency 'GrowingCoreKit', s.version
+  s.dependency 'GrowingCoreKit', s.version.to_s
   s.frameworks = 'Foundation' , 'WebKit'
   s.vendored_frameworks = 'GrowingIO-iOS-AutoTrackKit/*.framework'
 end
