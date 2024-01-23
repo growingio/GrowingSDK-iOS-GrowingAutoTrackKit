@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "GrowingAutoTrackKit"
-  s.version      = "2.9.16-hotfix.1"
+  s.version      = "2.9.16-hotfix.2"
   s.summary      = "GrowingIO-SDK-GrowingAutoTrackKit"
 
   s.description  = <<-DESC
