@@ -8,14 +8,10 @@ on:
 jobs:
   publish:
   
-    runs-on: macos-11
+    runs-on: macos-latest
     
     steps:
-      - uses: maxim-lobanov/setup-xcode@v1
-        with:
-          xcode-version: '11.7'
-        
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       # https://github.com/CocoaPods/CocoaPods/issues/9497
       # https://github.com/CocoaPods/cocoapods-trunk/pull/147
@@ -25,10 +21,10 @@ jobs:
           gem install cocoapods-trunk
           gem update cocoapods-trunk
         
+      # https://github.com/CocoaPods/CocoaPods/issues/10065
       - name: Deploy to Cocoapods
         run: |
           set -eo pipefail
-          pod repo update --verbose
-          pod trunk push --allow-warnings --verbose --synchronous
+          pod trunk push --skip-import-validation --allow-warnings --synchronous --verbose
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
